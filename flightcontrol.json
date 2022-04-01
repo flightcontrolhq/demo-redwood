@@ -21,6 +21,9 @@
           "envVariables": {
             "DATABASE_URL": {
               "fromService": { "id": "db", "value": "dbConnectionString" }
+            },
+            "REDWOOD_WEB_URL": {
+              "fromService": { "id": "redwood-web", "value": "origin" }
             }
           }
         },
@@ -30,7 +33,12 @@
           "type": "static",
           "singlePageApp": true,
           "buildCommand": "rw build web",
-          "outputDirectory": "web/dist"
+          "outputDirectory": "web/dist",
+          "envVariables": {
+            "REDWOOD_API_URL": {
+              "fromService": { "id": "redwood-api", "value": "origin" }
+            }
+          }
         },
         {
           "id": "db",
