@@ -3,7 +3,7 @@
     {
       "id": "development",
       "name": "Development",
-      "region": "us-east-1",
+      "region": "us-east-2",
       "source": {
         "branch": "main"
       },
