@@ -14,7 +14,7 @@
           "type": "fargate",
           "cpu": 0.25,
           "memory": 0.5,
-          "installCommand": "yarn set version stable && NODE_ENV=development yarn install",
+          "installCommand": "yarn set version self && NODE_ENV=development yarn install",
           "buildCommand": "yarn rw deploy flightcontrol api",
           "startCommand": "yarn rw deploy flightcontrol api --serve",
           "postBuildCommand": "echo 0",
